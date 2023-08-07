@@ -6,7 +6,7 @@
 /*   By: marykman <marykman@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/04 18:36:36 by marykman          #+#    #+#             */
-/*   Updated: 2023/08/05 15:08:07 by marykman         ###   ########.fr       */
+/*   Updated: 2023/08/07 15:36:52 by marykman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,16 @@ void	print_chars(char *str, int n)
 
 int	main(void)
 {
-	
-	/*char			*src = "Bonjour";
+	/*
+	char			*src = "Bonjour";
 	char			dst1[22] = "01234567890123456789aa";
 	char			dst2[22] = "01234567890123456789aa";
 	unsigned int	n = 7;
+	*/
 
-	printf("Yours(%d): `%s`\n", ft_strlcpy(dst1, src, n), dst1);
+	ft_putstr_non_printable("Hello \xff");
+
+	/*printf("Yours(%d): `%s`\n", ft_strlcpy(dst1, src, n), dst1);
 	print_chars(dst1, n + 10);
 	printf("\nOrigi(%lu): `%s`\n", strlcpy(dst2, src, n), dst2);
 	print_chars(dst2, n + 10);*/
