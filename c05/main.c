@@ -6,7 +6,7 @@
 /*   By: marykman <marykman@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 19:45:00 by marykman          #+#    #+#             */
-/*   Updated: 2023/08/15 01:24:59 by marykman         ###   ########.fr       */
+/*   Updated: 2023/08/15 14:54:55 by marykman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_fibonacci(int index);
 int	ft_sqrt(int nb);
 int	ft_is_prime(int nb);
 int	ft_find_next_prime(int nb);
-int ft_ten_queens_puzzle(void);
+int	ft_ten_queens_puzzle(void);
 
 int	main(void)
 {

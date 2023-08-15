@@ -6,11 +6,11 @@
 /*   By: marykman <marykman@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 12:51:50 by marykman          #+#    #+#             */
-/*   Updated: 2023/08/14 17:45:22 by marykman         ###   ########.fr       */
+/*   Updated: 2023/08/15 14:55:52 by marykman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_is_prime(int nb)	
+int	ft_is_prime(int nb)
 {
 	unsigned int	i;
 
