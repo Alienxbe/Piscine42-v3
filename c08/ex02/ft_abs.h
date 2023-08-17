@@ -1,33 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
+/*   ft_abs.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marykman <marykman@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/14 17:35:03 by marykman          #+#    #+#             */
-/*   Updated: 2023/08/17 22:49:58 by marykman         ###   ########.fr       */
+/*   Created: 2023/08/17 20:20:56 by marykman          #+#    #+#             */
+/*   Updated: 2023/08/17 21:56:23 by marykman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_is_prime(int nb)
-{
-	unsigned int	i;
+#ifndef FT_ABS_H
+# define FT_ABS_H
 
-	if (nb <= 1)
-		return (0);
-	i = 2;
-	while (i * i <= (unsigned int)nb)
-		if (nb % i++ == 0)
-			return (0);
-	return (1);
-}
+# define ABS(Value)	((Value < 0) ? -Value : Value)
 
-int	ft_find_next_prime(int nb)
-{
-	if (nb <= 1)
-		return (2);
-	while (!ft_is_prime(nb))
-		nb++;
-	return (nb);
-}
+#endif

@@ -1,33 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
+/*   ft_point.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marykman <marykman@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/14 17:35:03 by marykman          #+#    #+#             */
-/*   Updated: 2023/08/17 22:49:58 by marykman         ###   ########.fr       */
+/*   Created: 2023/08/17 20:34:47 by marykman          #+#    #+#             */
+/*   Updated: 2023/08/17 21:50:21 by marykman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_is_prime(int nb)
-{
-	unsigned int	i;
+#ifndef FT_POINT_H
+# define FT_POINT_H
 
-	if (nb <= 1)
-		return (0);
-	i = 2;
-	while (i * i <= (unsigned int)nb)
-		if (nb % i++ == 0)
-			return (0);
-	return (1);
-}
-
-int	ft_find_next_prime(int nb)
+typedef struct s_point
 {
-	if (nb <= 1)
-		return (2);
-	while (!ft_is_prime(nb))
-		nb++;
-	return (nb);
-}
+	int	x;
+	int	y;
+}	t_point;
+
+#endif

@@ -5,26 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: marykman <marykman@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/10 19:45:00 by marykman          #+#    #+#             */
-/*   Updated: 2023/08/17 22:49:13 by marykman         ###   ########.fr       */
+/*   Created: 2023/08/17 19:34:38 by marykman          #+#    #+#             */
+/*   Updated: 2023/08/18 00:09:35 by marykman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <limits.h>
+#include "ft_stock_str.h"
 
-int	ft_iterative_factorial(int nb);
-int	ft_recursive_factorial(int nb);
-int	ft_iterative_power(int nb, int power);
-int	ft_recursive_power(int nb, int power);
-int	ft_fibonacci(int index);
-int	ft_sqrt(int nb);
-int	ft_is_prime(int nb);
-int	ft_find_next_prime(int nb);
-int	ft_ten_queens_puzzle(void);
+struct s_stock_str	*ft_strs_to_tab(int ac, char **av);
+void				ft_show_tab(struct s_stock_str *par);
 
-int	main(void)
+int	main(int argc, char **argv)
 {
-	printf("%d\n", ft_find_next_prime(2147483630));
+	t_stock_str	*tab;
+
+	tab = ft_strs_to_tab(argc, argv);
+	ft_show_tab(tab);
 	return (0);
 }
