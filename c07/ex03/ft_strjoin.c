@@ -6,11 +6,12 @@
 /*   By: marykman <marykman@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/15 18:51:44 by marykman          #+#    #+#             */
-/*   Updated: 2023/08/16 17:05:38 by marykman         ###   ########.fr       */
+/*   Updated: 2023/08/17 02:52:50 by marykman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <stdio.h>
 
 int	ft_strlen(char *str)
 {
@@ -32,7 +33,11 @@ char	*ft_strcat(char *dest, char *src)
 	while (dest[i])
 		i++;
 	while (*src)
+	{
+		printf("Copying [%c] from %p -> %p\n", *src, src, dest + i);
 		dest[i++] = *src++;
+	}
+	printf("Copying `\\0` -> %p\n", dest + i);
 	dest[i] = '\0';
 	return (dest);
 }
@@ -64,9 +69,11 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	int		i;
 
 	len = ft_totlen(size, strs, sep);
+	printf("Allocate %d bytes\n", len + 1);
 	if (len < 0)
 		return (NULL);
 	str = (char *)malloc(sizeof(char) * (len + 1));
+	printf("Memory zone from : %p -> %p\n", str, str + len);
 	if (!str)
 		return (NULL);
 	if (!size)
