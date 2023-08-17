@@ -6,7 +6,7 @@
 /*   By: marykman <marykman@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/15 15:39:28 by marykman          #+#    #+#             */
-/*   Updated: 2023/08/16 23:43:06 by marykman         ###   ########.fr       */
+/*   Updated: 2023/08/17 15:35:04 by marykman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,11 @@ int	ft_word_count(char *str, char *charset);
 
 int	main(void)
 {
-	char	*str = "... ..Bonjour a tous les amis... .a";
-	char	*charset = "amis";
-	char	**strs;
+	char	*strs[] = {"   ", "Salut", "    ", "Hehe", NULL};
+	char	*sep = "/ \\";
 
-	strs = ft_split(str, charset);
-	if (!strs)
-		return (1);
-	for (int i=0; strs[i]; i++)
-		printf("%s\n", strs[i]);
+	char	*str = ft_strjoin(4, strs, sep);
+	printf("%s\n", str);
+	free(str);
 	return (0);
 }

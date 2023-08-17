@@ -6,7 +6,7 @@
 /*   By: marykman <marykman@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/16 17:21:53 by marykman          #+#    #+#             */
-/*   Updated: 2023/08/16 21:46:18 by marykman         ###   ########.fr       */
+/*   Updated: 2023/08/17 15:30:45 by marykman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ char	*ft_itoa_base(int n, char *base)
 		un = -n;
 	while (n_len--)
 	{
-		s[n_len] = (un % b_len) + '0';
+		s[n_len] = base[un % b_len];
 		un /= b_len;
 	}
 	if (n < 0)
