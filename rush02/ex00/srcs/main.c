@@ -6,7 +6,7 @@
 /*   By: marykman <marykman@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/19 14:47:41 by marykman          #+#    #+#             */
-/*   Updated: 2023/08/21 09:38:42 by marykman         ###   ########.fr       */
+/*   Updated: 2023/08/21 13:22:03 by marykman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,6 @@ int	main(int argc, char **argv)
 	if (!text)
 		return (ft_error("Error", 3));
 	ft_putendl(text);
+	free(text);
 	return (0);
 }

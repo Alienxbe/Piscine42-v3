@@ -6,7 +6,7 @@
 #    By: marykman <marykman@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/19 15:44:23 by marykman          #+#    #+#              #
-#    Updated: 2023/08/20 23:18:12 by marykman         ###   ########.fr        #
+#    Updated: 2023/08/21 11:42:00 by marykman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,7 @@ SRCS		=	ft_atoi.c \
 
 OBJS		=	$(addprefix srcs/, ${SRCS:.c=.o})
 
-NAME		=	rush02
+NAME		=	rush-02
 
 %.o:	%.c
 	${GCC} ${INCLUDES} ${CFLAGS} -c $< -o $@
