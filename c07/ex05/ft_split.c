@@ -6,7 +6,7 @@
 /*   By: marykman <marykman@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/16 22:47:47 by marykman          #+#    #+#             */
-/*   Updated: 2023/08/16 23:38:35 by marykman         ###   ########.fr       */
+/*   Updated: 2023/08/23 20:45:47 by marykman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,4 +91,23 @@ char	**ft_split(char *str, char *charset)
 	}
 	tab[i] = NULL;
 	return (tab);
+}
+
+#include <stdio.h>
+
+int	main(void)
+{
+	char	*str;
+	char	*charset;
+	int		i;
+	char	**arr;
+
+	str = "8vCLz5p";
+	charset = "8vCLz5p";
+	arr = ft_split(str, charset);
+	i = 0;
+	while (arr[i])
+		printf("[%s]", arr[i++]);
+	printf("\n\narr[0]=[%s]", arr[0]);
+	return (0);
 }
