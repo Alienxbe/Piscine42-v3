@@ -6,15 +6,15 @@
 /*   By: marykman <marykman@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 17:55:12 by marykman          #+#    #+#             */
-/*   Updated: 2023/08/23 18:29:35 by marykman         ###   ########.fr       */
+/*   Updated: 2023/08/23 22:07:47 by marykman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "bsq.h"
 
 /*
-** Fonction qui teste si on peut mettre un square 
-** en X Y
+** Function that test if the given square fit in his position
+** depending on obstacles an map size
 */
 int	sqr_fit(t_data data, t_sqr sqr)
 {

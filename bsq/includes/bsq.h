@@ -6,7 +6,7 @@
 /*   By: marykman <marykman@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 10:55:55 by marykman          #+#    #+#             */
-/*   Updated: 2023/08/23 18:57:29 by marykman         ###   ########.fr       */
+/*   Updated: 2023/08/23 23:04:00 by marykman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 // Open
 # include <fcntl.h>
 
-# define BUFFER_SIZE	1024
+# define BUFFER_SIZE	1
 
 typedef enum e_error
 {

@@ -6,7 +6,7 @@
 /*   By: marykman <marykman@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 14:27:32 by marykman          #+#    #+#             */
-/*   Updated: 2023/08/23 19:00:57 by marykman         ###   ########.fr       */
+/*   Updated: 2023/08/23 22:57:02 by marykman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ int	check_line(t_data *data, char *line)
 	while (line[++i])
 		if (!(line[i] == data->chars.empty || line[i] == data->chars.obstacle))
 			return (MAP_ERROR);
+	if (!i)
+		return (MAP_ERROR);
 	return (SUCCESS);
 }
 
@@ -65,18 +67,19 @@ int	ft_parse_map(t_data *data, int fd)
 	while (ret > 0 && i < data->height)
 	{
 		ret = get_next_line(fd, &line);
+		data->tab[i] = line;
 		error = check_line(data, line);
 		if (error == MAP_ERROR)
 			return (ft_free_tab(data->tab, i, error));
 		if (error == MALLOC_ERROR)
-			return (ft_free_tab(data->tab, i - 1, error));
+			return (ft_free_tab(data->tab, i, error));
 		if (!i)
 			data->width = ft_strlen(line);
 		else if (ft_strlen(line) != data->width)
 			return (ft_free_tab(data->tab, i, MAP_ERROR));
-		data->tab[i++] = line;
+		i++;
 	}
-	if ((fd > 0 && !ret) || i != data->height || check_empty_line(fd))
+	if (!ret || i != data->height || check_empty_line(fd))
 		return (ft_free_tab(data->tab, i - 1, MAP_ERROR));
 	return (SUCCESS);
 }

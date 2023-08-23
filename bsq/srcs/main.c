@@ -6,7 +6,7 @@
 /*   By: marykman <marykman@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 10:52:49 by marykman          #+#    #+#             */
-/*   Updated: 2023/08/23 19:01:44 by marykman         ###   ########.fr       */
+/*   Updated: 2023/08/23 22:50:24 by marykman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,15 @@ int	main(int argc, char **argv)
 	if (argc == 1)
 		ft_bsq(NULL);
 	else if (argc > 1)
+	{
 		while (++i < argc)
+		{
 			ft_bsq(argv[i]);
+			if (i < argc - 1)
+				ft_putchar('\n');
+		}
+	}
 	else
 		return (1);
-	system("leaks bsq");
 	return (0);
 }
