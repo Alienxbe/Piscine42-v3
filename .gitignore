@@ -10,3 +10,5 @@
 
 # Executables
 *.out
+
+.vscode
